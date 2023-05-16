@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <h1>JavaScript Arrays</h1>
+    <h2>The length Property</h2>
+    <p>The length property returns the length of an array:</p>
+
+    <p id="demo"></p>
+    <!-- The length Property -->
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let size = fruits.length;
+        document.getElementById("demo").innerHTML = size;
+    </script>
+
+
+<!-- Array Methods toString() -->
+     <h2>toString()</h2>
+        <p>The toString() method returns an array as a comma separated string:</p>
+        <p id="demo1"></p>
+
+        <script>
+            const fruit = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo1").innerHTML = fruit.toString();
+        </script>
+
+<!-- Array Methods poping() -->
+        <h2>pop()</h2>
+        <p>The pop() method removes the last element from an array.</p>
+        <p id="model"></p>
+        <p id="model1"></p>
+
+        <script>
+            const cars = ["BMW", "Audi", "Tata", "Honda"];
+            document.getElementById("model").innerHTML = cars;
+            cars.pop();
+            document.getElementById("model1").innerHTML = cars;
+        </script>
+
+
+<!-- Array Methods pushing() -->
+       <h2>push()</h2>
+        <p>The push() method appends a new element to an array:</p>
+
+        <p id="dem1"></p>
+        <p id="dem2"></p>
+
+        <script>
+            const fruite = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("dem1").innerHTML = fruite;
+            fruite.push("Kiwi");
+            document.getElementById("dem2").innerHTML = fruite;
+        </script>
+
+<!-- Array Methods shift() -->
+        <h2>shift()</h2>
+        <p>The shift() method removes the first element of an array (and "shifts" the other elements to the left):</p>
+
+        <p id="bike"></p>
+        <p id="bike1"></p>
+
+        <script>
+            const bikes = ["TVS", "KTM", "MT100", "NS200"];
+            document.getElementById("bike").innerHTML = bikes;
+            bikes.shift();
+            document.getElementById("bike1").innerHTML = bikes;
+        </script>
+
+
+<!-- Array Methods unshift() -->
+        <h2>Unshift()</h2>
+        <p>The Unshift() method add the first element of an array (and "shifts" the other elements to the left):</p>
+
+        <p id="bikes"></p>
+        <p id="bikes1"></p>
+
+        <script>
+            const bikers = ["TVS", "KTM", "MT100"];
+            document.getElementById("bikes").innerHTML = bikers;
+            bikers.unshift("NS200");
+            document.getElementById("bikes1").innerHTML = bikers;
+        </script>
+
+
+<!-- Array Methods delete() -->
+        <h2>The delete Method</h2>
+
+        <p>Deleting elements leaves undefined holes in an array:</p>
+
+        <p id="fruit"></p>
+        <p id="fruit1"></p>
+
+        <script>
+            const fruitses = ["Banana", "Orange", "Apple", "Mango"];
+
+            document.getElementById("fruit").innerHTML =
+            "The first fruit is: " + fruitses[0];
+
+            delete fruitses[0];
+
+            document.getElementById("fruit1").innerHTML =
+            "The first fruit is: " + fruitses[0];
+        </script>
+
+
+<!-- Array Methods concat() -->
+        <h2>The concat() Method</h2>
+
+        <p>The concat() method merges (concatenates) arrays:</p>
+
+        <p id="demos"></p>
+
+        <script>
+            const array1 = ["Cecilie", "Lone"];
+            const array2 = ["Emil", "Tobias", "Linus"];
+            const array3 = ["Robin", "Morgan"];
+
+            const myChildren = array1.concat(array2, array3); 
+
+            document.getElementById("demos").innerHTML = myChildren;
+        </script>
+
+
+<!-- Array Methods splice() -->
+        <h2>The splice() Method</h2>
+
+        <script> 
+            var webDvlop = ["HTML", "CSS", "JS", "Bootstrap"];
+            
+            console.log(webDvlop);
+            
+            // Add 'React_Native' and 'Php' after removing 'JS'.
+            var removed = webDvlop.splice(2, 1, 'PHP', 'React_Native')
+            
+            console.log(webDvlop);
+            console.log(removed);
+            
+            // No Removing only Insertion from 2nd
+            // index from the ending
+            webDvlop.splice(-2, 0, 'React')
+            console.log(webDvlop)
+        </script>
+
+
+<!-- Array Methods slice() -->
+        <h2>The slice() Method</h2>
+        
+        <script>
+            function func() {
+                // Original Array
+                var arr = [23,56,87,32,75,13];
+                // Extracted array
+                var new_arr = arr.slice(2,4);
+                console.log(arr);
+                console.log(new_arr);
+            }
+            func();
+        </script>
+</body>
+</html>
