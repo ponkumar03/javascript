@@ -162,5 +162,101 @@
             }
             func();
         </script>
+
+<!-- yours input exsisting or not  in array                                                    -->
+
+<form id="form" onsubmit="return false;">
+    <input style="position:absolute" type="text" id="userInput" /> <br>
+    <input style="position:absolute;" type="submit" onclick="name();" /> <br>
+    <script type="text/javascript">
+  
+  function name() {
+    var fru = ["Apple", "Banana", "Mango", "Orange", "Papaya"];
+    var input = document.getElementById("userInput").value;
+  
+   //Check if a value exists in the data1 array
+   if(fru.indexOf(input) !== -1){
+     document.write(input, " Value exists!");
+     document.write(" Press F5 to reload")
+   } else{
+     document.write(input, " Value does not exists!");
+     document.write(" Press F5 to reload");
+  }
+  }
+  </script>
+
+
+<!-- onditional statements -->
+<h2>JavaScript if .. else</h2>
+
+<p>A time-based greeting:</p>
+
+<p id="demo"></p>   
+
+<script>
+        const time = new Date().getHours();
+        let greeting;
+        if (time < 10) {
+        greeting = "Good morning";
+        } else if (time < 20) {
+        greeting = "Good day";
+        } else {
+        greeting = "Good evening";
+        }
+        document.getElementById("demo").innerHTML = greeting;
+</script>
+
+    <script>
+        // check if the number is positive or negative/zero
+
+        const number = prompt("Enter a number: ");
+
+        // check if number is greater than 0
+        if (number > 0) {
+        console.log("The number is positive");
+        }
+        // if number is not greater than 0
+        else {
+        console.log("The number is either a negative number or 0");
+        }
+
+        console.log("The if...else statement is easy");
+    </script>
+
+
+
+<!-- switch statement of javascript Method -->
+        <p>Write Banana, Orange or Apple in the input field and click the button.</p>
+        <p>The switch statement will execute a block of code based on your input.</p>
+
+        <input id="myInput" type="text">
+
+        <button onclick="myFunction()">Try it</button>
+
+        <p id="demo"></p>
+
+<script>
+        function myFunction() {
+        var text;
+        var fruits = document.getElementById("myInput").value;
+
+        switch(fruits) {
+            case "Banana":
+            text = "Banana is good!";
+            break;
+            case "Orange":
+            text = "I am not a fan of orange.";
+            break;
+            case "Apple":
+            text = "How you like them apples?";
+            break;
+            default:
+            text = "I have never heard of that fruit...";
+        }
+        document.getElementById("demo").innerHTML = text;
+        }
+</script>
+
+
 </body>
 </html>
